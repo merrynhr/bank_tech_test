@@ -2,6 +2,8 @@ require 'date'
 
 class Bank
 
+  attr_reader :balance
+
   def initialize
     @balance = 0
     @date_array = []
