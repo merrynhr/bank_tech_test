@@ -10,7 +10,6 @@ class Bank
     @balance_array = []
     @credit_array = []
     @debit_array = []
-    @counter = -1
   end
 
   def deposit(money)
@@ -25,6 +24,13 @@ class Bank
     @credit_array.push(0)
     @balance_array.push(@balance -= money)
     @date_array.push(Date.today)
+    overdraft?
+  end
+
+  private 
+
+  def overdraft?
+    puts "Warning: you are now overdrawn by #{balance.abs}" if @balance < 0
   end
 
 end
