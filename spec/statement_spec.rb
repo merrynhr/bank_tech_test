@@ -10,6 +10,14 @@ describe Statement do
   it 'can print title' do
     expect(@statement.print_title).to eq("date || credit(£) || debit(£) || balance(£)")
   end
+
+  it 'can print statement' do
+    list = "date || credit(£) || debit(£) || balance(£)" + "\n" + "#{Date.today} || 1000.00 || 0.00 || 1000.00" + "\n"
+    expect{@statement.print_statement}.to output(list).to_stdout
+  end
+
+
+
   
 end
 
