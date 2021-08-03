@@ -1,4 +1,5 @@
 require './lib/bank.rb'
+require 'date'
 
 describe Bank do
   it 'has zero money at before transactions have taken place' do
@@ -17,6 +18,12 @@ describe Bank do
     bank.deposit(1000)
     bank.withdrawal(500)
     expect(bank.balance).to eq(500)
+  end
+
+  it 'can save the date of transactions' do
+    bank = Bank.new
+    bank.deposit(1000)
+    expect(bank.date_array[0]).to eq(Date.today)
   end
 
 end
