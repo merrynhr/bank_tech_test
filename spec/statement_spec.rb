@@ -7,6 +7,10 @@ describe Statement do
     @statement = Statement.new([Date.today], [1000], [0], [1000])
   end
 
+  it 'formats money correctly' do
+    expect(@statement.money_format).to include("0.00")
+  end
+
   it 'can print title' do
     expect(@statement.print_title).to eq("date || credit(£) || debit(£) || balance(£)")
   end
@@ -15,9 +19,6 @@ describe Statement do
     list = "date || credit(£) || debit(£) || balance(£)" + "\n" + "#{Date.today} || 1000.00 || 0.00 || 1000.00" + "\n"
     expect{@statement.print_statement}.to output(list).to_stdout
   end
-
-
-
   
 end
 
