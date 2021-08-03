@@ -15,11 +15,11 @@ class Statement
   end
 
   def print_title
-    puts "date || credit(£) || debit(£) || balance(£)" 
+    "date || credit(£) || debit(£) || balance(£)" 
   end
 
   def print_statement 
-    print_title
+    puts print_title
     money_format
     while @i > -1 - @balance_array.length
       puts "#{@date_array[@i]} || #{@credit_array[@i]} || #{@debit_array[@i]} || #{@balance_array[@i]}"
