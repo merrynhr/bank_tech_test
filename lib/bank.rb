@@ -2,7 +2,7 @@ require 'date'
 
 class Bank
 
-  attr_reader :balance
+  attr_reader :balance, :date_array, :balance_array, :credit_array, :debit_array
 
   def initialize
     @balance = 0
@@ -27,13 +27,4 @@ class Bank
     @date_array.push(Date.today)
   end
 
-  def print_statement 
-    puts "date || credit || debit || balance" 
-    while @counter > -1 - @balance_array.length
-      puts "#{@date_array[@counter]} || #{@credit_array[@counter]} || #{@debit_array[@counter]} || #{@balance_array[@counter]}"
-      #puts "#{Date.today} || #{sprintf "%.2f", @balance} "
-      @counter -=1
-    end
-  end
-  
 end
