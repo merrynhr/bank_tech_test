@@ -7,7 +7,6 @@ class Statement
     @credit_array = credit_array
     @debit_array = debit_array
     @balance_array = balance_array
-    @i = -1
   end
 
   def money_format
@@ -21,9 +20,10 @@ class Statement
   def print_statement 
     puts print_title
     money_format
-    while @i > -1 - @balance_array.length
-      puts "#{@date_array[@i]} || #{@credit_array[@i]} || #{@debit_array[@i]} || #{@balance_array[@i]}"
-      @i -=1
+    i = -1
+    while i > -1 - @balance_array.length
+      puts "#{@date_array[i]} || #{@credit_array[i]} || #{@debit_array[i]} || #{@balance_array[i]}"
+      i -=1
     end
   end
   
@@ -36,3 +36,4 @@ class Statement
   end
 
 end
+

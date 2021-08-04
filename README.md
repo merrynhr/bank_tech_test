@@ -38,10 +38,6 @@ date || credit || debit || balance
 * bank.deposit(2000)
 * bank.withdrawal(500)
 * puts bank.balance
-* date_array = bank.date_array
-* credit_array = bank.credit_array
-* debit_array = bank.debit_array
-* balance_array = bank.balance_array
-* statement = Statement.new(date_array, credit_array, debit_array, balance_array)
+* statement = Statement.new(bank.date_array, bank.credit_array, bank.debit_array, bank.balance_array)
 
 puts statement.print_statement
