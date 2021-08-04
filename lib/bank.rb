@@ -1,4 +1,4 @@
-require 'date'
+require './statement.rb'
 
 class Bank
 
@@ -10,6 +10,7 @@ class Bank
     @balance_array = []
     @credit_array = []
     @debit_array = []
+    @statement = Statement.new(@date_array, @credit_array, @debit_array, @balance_array)
   end
 
   def deposit(money)
@@ -25,6 +26,10 @@ class Bank
     @balance_array.push(@balance -= money)
     @date_array.push(Date.today)
     overdraft?
+  end
+
+  def print_statement
+    @statement.print_statement
   end
 
   private 
