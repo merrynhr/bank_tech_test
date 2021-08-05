@@ -32,10 +32,19 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 ### Test in IRB!
-
+* cd lib
+* irb
+* require './bank.rb'
 * bank = Bank.new
 * bank.deposit(1000)
 * bank.deposit(2000)
 * bank.withdrawal(500)
 * puts bank.balance
-* puts statement.print_statement
+* puts bank.print_statement
+
+### Test with rspec and simplecov!
+* bundle
+* run rspec!
+* 98.75% test coverage
+
+
