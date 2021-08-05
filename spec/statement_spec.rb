@@ -1,4 +1,4 @@
-require './lib/statement.rb'
+require 'statement.rb'
 require 'date'
 
 describe Statement do

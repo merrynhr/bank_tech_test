@@ -1,5 +1,4 @@
-require './lib/bank.rb'
-require 'date'
+require 'bank.rb'
 
 describe Bank do
 

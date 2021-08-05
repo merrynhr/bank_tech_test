@@ -1,4 +1,5 @@
-require './statement.rb'
+require_relative 'statement'
+require 'date'
 
 class Bank
 
